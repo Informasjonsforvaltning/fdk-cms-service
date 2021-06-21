@@ -1,0 +1,68 @@
+{
+  "env": {
+    "es2020": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb/base",
+    "prettier",
+    "plugin:json/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": ["html", "json", "prettier", "eslint-comments"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "arrowParens": "avoid",
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "./webpack/*",
+          "./src/types/**/*",
+          "./test/**/*",
+          "**/__tests__/**/*",
+          "**/*test.js"
+        ]
+      }
+    ],
+    "no-use-before-define": "off",
+    "no-restricted-globals": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "no-shadow": "off",
+    "camelcase": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["./test/**/*", "**/__tests__/**/*.[jt]s?(x)"],
+      "rules": {
+        "no-console": [
+          "error",
+          {
+            "allow": ["warn", "error"]
+          }
+        ]
+      }
+    }
+  ]
+}
