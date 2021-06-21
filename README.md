@@ -1,6 +1,6 @@
 # fdk-cms-service
 
-A headless Content Management Solution based on [strapi][strapi].
+A headless Content Management System based on [strapi][strapi].
 
 ## Quickstart
 
