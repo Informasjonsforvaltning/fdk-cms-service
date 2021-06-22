@@ -35,7 +35,7 @@ jobs:
           flavor: |
             latest=true
           tags: |
-            type=sha,prefix={{branch}}-
+            type=sha,prefix={{branch}}-,priority=1000
             type=ref,event=branch
 
       - name: Build and push
