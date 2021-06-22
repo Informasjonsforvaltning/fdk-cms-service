@@ -26,6 +26,16 @@ jobs:
         id: buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: eu.gcr.io/digdir-fdk-infra/fdk-cms-service
+          flavor: |
+            latest=true
+            type=ref,event=branch
+            type=sha,prefix={{branch}}-
+
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
@@ -33,9 +43,8 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: |
-            eu.gcr.io/digdir-fdk-infra/fdk-cms-service:$GITHUB_SHA
-            eu.gcr.io/digdir-fdk-infra/fdk-cms-service:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
           build-args:  |
