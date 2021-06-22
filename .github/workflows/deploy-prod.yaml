@@ -69,8 +69,6 @@ jobs:
       - run: gcloud container clusters get-credentials digdir-fdk-prod --region europe-north1-a --project digdir-fdk-prod
 
       - run: kubectl apply -f ./kubectlapply.yaml --force
-        env:
-          KUBECONFIG: '/github/workspace/.kube/config'
 
       # - name: Notify slack
       #   uses: 8398a7/action-slack@v3
