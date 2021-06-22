@@ -33,6 +33,7 @@ jobs:
           images: eu.gcr.io/digdir-fdk-infra/fdk-cms-service
           flavor: |
             latest=true
+          tags: |
             type=ref,event=branch
             type=sha,prefix={{branch}}-
 
