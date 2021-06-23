@@ -15,6 +15,15 @@
       "type": "string",
       "required": true
     },
+    "featureImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
     "content": {
       "type": "richtext",
       "required": true
