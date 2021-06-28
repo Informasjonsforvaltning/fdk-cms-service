@@ -24,9 +24,11 @@ module.exports = ({ env }) => {
           database: env('POSTGRES_NAME'),
           username: env('POSTGRES_USERNAME'),
           password: env('POSTGRES_PASSWORD'),
-          ssl: {
-            rejectUnauthorized: env.bool('POSTGRES_SSL_SELF', false) // For self-signed certificates
-          }
+          ssl: env.bool('POSTGRES_SSL', false)
+            ? {
+                rejectUnauthorized: env.bool('POSTGRES_SSL_SELF', false) // For self-signed certificates
+              }
+            : false
         },
         options: {
           useNullAsDefault: true
