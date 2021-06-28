@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fancy-article",
+  "info": {
+    "name": "Fancy Article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": [
+        "basic.quote",
+        "basic.image",
+        "basic.paragraph"
+      ]
+    }
+  }
+}
