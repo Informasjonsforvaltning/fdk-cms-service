@@ -1,6 +1,3 @@
-'use strict';
-
-const _ = require('lodash');
 const { OAuth2Client } = require('google-auth-library');
 const oAuth2Client = new OAuth2Client();
 
