@@ -1,5 +1,12 @@
 const { OAuth2Client } = require('google-auth-library');
+
 const oAuth2Client = new OAuth2Client();
+
+// TODO: Add stuff below
+// TODO: Make variables configurable
+const backendServiceId = ''; // run `gcloud compute backend-services describe SERVICE_NAME --project=PROJECT_ID --global` (id)
+const projectNumber = ''; // run `gcloud projects describe PROJECT_ID` (projectNumber (INT))
+const expectedAudience = `/projects/${projectNumber}/global/backendServices/${backendServiceId}`;
 
 module.exports = async (ctx, next) => {
   let role = await strapi
@@ -29,11 +36,11 @@ module.exports = async (ctx, next) => {
       ['https://cloud.google.com/iap']
     );
     const payload = ticket.getPayload();
-    if (!ticket || !payload) {
+    if (!ticket || !payload) {
       return handleErrors(ctx, undefined, 'forbidden');
     }
 
-    const email = payload.email;
+    const { email } = payload;
 
     ctx.state.user = await strapi.plugins[
       'users-permissions'
@@ -70,7 +77,7 @@ module.exports = async (ctx, next) => {
     role = ctx.state.user.role;
   }
 
-  const route = ctx.request.route;
+  const { route } = ctx.request;
   const permission = await strapi
     .query('permission', 'users-permissions')
     .findOne(
