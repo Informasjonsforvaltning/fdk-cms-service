@@ -3,9 +3,9 @@ const { OAuth2Client } = require('google-auth-library');
 const oAuth2Client = new OAuth2Client();
 
 // TODO: Add stuff below
-// TODO: Make variables configurable
-const backendServiceId = ''; // run `gcloud compute backend-services describe SERVICE_NAME --project=PROJECT_ID --global` (id)
-const projectNumber = ''; // run `gcloud projects describe PROJECT_ID` (projectNumber (INT))
+// TODO: Make env variables configurable in config files.
+const backendServiceId = process.env.BACKEND_SERVICE_ID; // run `gcloud compute backend-services describe SERVICE_NAME --project=PROJECT_ID --global` (id)
+const projectNumber = process.env.PROJECT_NUMBER; // run `gcloud projects describe PROJECT_ID` (projectNumber (INT))
 const expectedAudience = `/projects/${projectNumber}/global/backendServices/${backendServiceId}`;
 
 module.exports = async (ctx, next) => {
@@ -70,7 +70,7 @@ module.exports = async (ctx, next) => {
           confirmed: true
         });
       } catch (err) {
-        console.log('Exception in user creation in permissions', err);
+        throw new Error('Exception in user creation in permissions');
       }
     }
 
