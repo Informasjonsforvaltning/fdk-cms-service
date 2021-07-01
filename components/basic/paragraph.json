@@ -1,0 +1,13 @@
+{
+  "collectionName": "paragraph",
+  "info": {
+    "name": "Paragraph",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
