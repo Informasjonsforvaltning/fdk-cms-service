@@ -38,9 +38,6 @@
     "strapi-plugin-users-permissions": "3.6.3",
     "strapi-utils": "3.6.3"
   },
-  "strapi": {
-    "uuid": "2a0d0e9f-d0e8-401a-b13f-243e3e3538f3"
-  },
   "engines": {
     "node": ">=10.16.0 <=14.x.x",
     "npm": "^6.0.0"

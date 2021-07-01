@@ -35,6 +35,7 @@
         ]
       }
     ],
+    "global": "strapi",
     "no-use-before-define": "off",
     "no-restricted-globals": "off",
     "no-underscore-dangle": "off",
