@@ -19,6 +19,8 @@ module.exports = async (ctx, next) => {
   }
 
   if (
+    backendServiceId &&
+    projectNumber &&
     ctx.request &&
     ctx.request.header &&
     ctx.request.header['x-goog-iap-jwt-assertion']
