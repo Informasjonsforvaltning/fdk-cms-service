@@ -13,7 +13,10 @@ module.exports = async (ctx, next) => {
     .query('role', 'users-permissions')
     .findOne({ type: 'public' }, []);
 
-  if (process.env.NODE_ENV === 'development' && ctx.state.user) {
+  const isIapEnabled =
+    process.env.NODE_ENV !== 'development' && backendServiceId && projectNumber;
+
+  if (!isIapEnabled && ctx.state.user) {
     // request is already authenticated in a different way
     return next();
   }
