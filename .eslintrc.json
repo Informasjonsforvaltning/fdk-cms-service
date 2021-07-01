@@ -12,6 +12,9 @@
     "plugin:import/warnings"
   ],
   "plugins": ["html", "json", "prettier", "eslint-comments"],
+  "globals": {
+    "strapi": "writable"
+  },
   "rules": {
     "prettier/prettier": [
       "error",
@@ -35,7 +38,6 @@
         ]
       }
     ],
-    "global": "strapi",
     "no-use-before-define": "off",
     "no-restricted-globals": "off",
     "no-underscore-dangle": "off",
