@@ -37,7 +37,7 @@ module.exports = async (ctx, next) => {
     );
     const payload = ticket.getPayload();
     if (!ticket || !payload) {
-      return handleErrors(ctx, undefined, 'forbidden');
+      throw handleErrors(ctx, undefined, 'forbidden');
     }
 
     const { email } = payload;
@@ -92,13 +92,11 @@ module.exports = async (ctx, next) => {
     );
 
   if (!permission) {
-    return handleErrors(ctx, undefined, 'forbidden');
+    throw handleErrors(ctx, undefined, 'forbidden');
   }
 
   // Execute the action.
-  await next();
+  return next();
 };
 
-const handleErrors = (ctx, err = undefined, type) => {
-  throw strapi.errors[type](err);
-};
+const handleErrors = (ctx, err = undefined, type) => strapi.errors[type](err);

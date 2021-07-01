@@ -1,3 +1,4 @@
+/* eslint no-console: off */
 module.exports = ({ env }) => {
   const connection = env('CONNECTION', 'default');
   console.log(`Current Connection: ${connection}`);
