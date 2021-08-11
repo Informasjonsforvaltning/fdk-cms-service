@@ -14,7 +14,10 @@ module.exports = async (ctx, next) => {
     .findOne({ type: 'public' }, []);
 
   const isIapEnabled =
-    process.env.NODE_ENV !== 'development' && backendServiceId && projectNumber;
+    process.env.NODE_ENV !== 'development' &&
+    backendServiceId &&
+    projectNumber &&
+    process.env.ENABLE_IAP;
 
   if (!isIapEnabled && ctx.state.user) {
     // request is already authenticated in a different way
