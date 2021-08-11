@@ -66,7 +66,6 @@ jobs:
           helm fetch --untar --untardir ./helm fdk/fdk-cms-service
           helm template  \
             --set DOCKER_IMAGE_NAME="eu.gcr.io/digdir-fdk-infra/fdk-cms-service:${{ steps.meta.outputs.version }}" \
-            --set FDK_CMS_SERVICE_ENABLE_IAP=false \
             -f ./helm/fdk-cms-service/values/prod.yaml \
             ./helm/fdk-cms-service/ > ./kubectlapply.yaml
           chmod o+w ./kubectlapply.yaml
