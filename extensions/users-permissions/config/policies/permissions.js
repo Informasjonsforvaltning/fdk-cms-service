@@ -59,6 +59,8 @@ module.exports = async (ctx, next) => {
     ctx.state.user = await strapi.plugins[
       'users-permissions'
     ].services.user.fetch({ email }, ['role']);
+    
+    console.log({ user: ctx.state.user }, 'user object');
 
     if (!ctx.state.user) {
       try {
