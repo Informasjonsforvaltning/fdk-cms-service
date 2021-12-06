@@ -92,7 +92,7 @@ module.exports = async (ctx, next) => {
   }
 
   const { route } = ctx.request;
-  console.log({ permission }, 'Found a route');
+  console.log({ route }, 'Found a route');
   const permission = await strapi
     .query('permission', 'users-permissions')
     .findOne(
