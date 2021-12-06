@@ -18,6 +18,8 @@ module.exports = async (ctx, next) => {
     backendServiceId &&
     projectNumber &&
     process.env.ENABLE_IAP;
+  
+  console.log({ expectedAudience, isIapEnabled });
 
   if (!isIapEnabled && ctx.state.user) {
     // request is already authenticated in a different way
