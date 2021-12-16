@@ -19,8 +19,6 @@ module.exports = async (ctx, next) => {
     projectNumber &&
     process.env.ENABLE_IAP;
 
-  console.log({ expectedAudience, isIapEnabled });
-
   if (!isIapEnabled && ctx.state.user) {
     // request is already authenticated in a different way
     return next();
@@ -34,14 +32,11 @@ module.exports = async (ctx, next) => {
     ctx.request.header['x-goog-iap-jwt-assertion']
   ) {
     if (ctx.state.user) {
-      console.log({ user: ctx.state.user }, 'request is already authenticated in a different way');
-      console.log({ user_roles: ctx.state.user.roles }, 'user roles')
       // request is already authenticated in a different way
       return next();
     }
 
     const iapJwt = ctx.request.header['x-goog-iap-jwt-assertion'];
-    console.log({ iapJwt }, 'Found a IAP JWT');
     const response = await oAuth2Client.getIapPublicKeys();
     const ticket = await oAuth2Client.verifySignedJwtWithCertsAsync(
       iapJwt,
@@ -50,7 +45,6 @@ module.exports = async (ctx, next) => {
       ['https://cloud.google.com/iap']
     );
     const payload = ticket.getPayload();
-    console.log({ ticket, payload }, 'Found a ticket and payload');
     if (!ticket || !payload) {
       throw handleErrors(ctx, undefined, 'forbidden');
     }
@@ -60,8 +54,6 @@ module.exports = async (ctx, next) => {
     ctx.state.user = await strapi.plugins[
       'users-permissions'
     ].services.user.fetch({ email }, ['role']);
-
-    console.log({ user: ctx.state.user }, 'user object');
 
     if (!ctx.state.user) {
       try {
@@ -90,15 +82,10 @@ module.exports = async (ctx, next) => {
         throw new Error('Exception in user creation in permissions');
       }
     }
-
-    //role = ctx.state.user.role;
-    console.log({ user_roles: ctx.state.user.roles }, 'user roles')
-    console.log({ user_role: role }, 'user role')
-  }
+ }
 
   const role = ctx.state.user.roles?.length > 0 ? ctx.state.user.roles[0] : publicRole;
   const { route } = ctx.request;
-  console.log({ route }, 'Found a route');
   const permission = await strapi
     .query('permission', 'users-permissions')
     .findOne(
@@ -111,8 +98,6 @@ module.exports = async (ctx, next) => {
       },
       []
     );
-
-  console.log({ permission }, 'Found a permission');
 
   if (!permission) {
     throw handleErrors(ctx, undefined, 'forbidden');
