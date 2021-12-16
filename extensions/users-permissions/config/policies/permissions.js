@@ -9,7 +9,7 @@ const projectNumber = process.env.PROJECT_NUMBER; // run `gcloud projects descri
 const expectedAudience = `/projects/${projectNumber}/global/backendServices/${backendServiceId}`;
 
 module.exports = async (ctx, next) => {
-  let role = await strapi
+  let publicRole = await strapi
     .query('role', 'users-permissions')
     .findOne({ type: 'public' }, []);
 
@@ -91,11 +91,12 @@ module.exports = async (ctx, next) => {
       }
     }
 
-    role = ctx.state.user.role;
+    //role = ctx.state.user.role;
     console.log({ user_roles: ctx.state.user.roles }, 'user roles')
     console.log({ user_role: role }, 'user role')
   }
-  console.log({ role }, 'Found a role');
+
+  const role = ctx.state.user.roles?.length > 0 ? ctx.state.user.roles[0] : publicRole;
   const { route } = ctx.request;
   console.log({ route }, 'Found a route');
   const permission = await strapi
