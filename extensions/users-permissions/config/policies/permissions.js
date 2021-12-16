@@ -18,7 +18,7 @@ module.exports = async (ctx, next) => {
     backendServiceId &&
     projectNumber &&
     process.env.ENABLE_IAP;
-  
+
   console.log({ expectedAudience, isIapEnabled });
 
   if (!isIapEnabled && ctx.state.user) {
@@ -38,7 +38,7 @@ module.exports = async (ctx, next) => {
       // request is already authenticated in a different way
       return next();
     }
-    
+
     const iapJwt = ctx.request.header['x-goog-iap-jwt-assertion'];
     console.log({ iapJwt }, 'Found a IAP JWT');
     const response = await oAuth2Client.getIapPublicKeys();
@@ -59,7 +59,7 @@ module.exports = async (ctx, next) => {
     ctx.state.user = await strapi.plugins[
       'users-permissions'
     ].services.user.fetch({ email }, ['role']);
-    
+
     console.log({ user: ctx.state.user }, 'user object');
 
     if (!ctx.state.user) {
@@ -92,7 +92,7 @@ module.exports = async (ctx, next) => {
 
     role = ctx.state.user.role;
   }
-
+  console.log({ role }, 'Found a role');
   const { route } = ctx.request;
   console.log({ route }, 'Found a route');
   const permission = await strapi
@@ -107,7 +107,7 @@ module.exports = async (ctx, next) => {
       },
       []
     );
-  
+
   console.log({ permission }, 'Found a permission');
 
   if (!permission) {
