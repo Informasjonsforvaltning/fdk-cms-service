@@ -35,6 +35,7 @@ module.exports = async (ctx, next) => {
   ) {
     if (ctx.state.user) {
       console.log({ user: ctx.state.user }, 'request is already authenticated in a different way');
+      console.log({ user_roles: ctx.state.user.roles }, 'user roles')
       // request is already authenticated in a different way
       return next();
     }
@@ -91,6 +92,8 @@ module.exports = async (ctx, next) => {
     }
 
     role = ctx.state.user.role;
+    console.log({ user_roles: ctx.state.user.roles }, 'user roles')
+    console.log({ user_role: role }, 'user role')
   }
   console.log({ role }, 'Found a role');
   const { route } = ctx.request;
