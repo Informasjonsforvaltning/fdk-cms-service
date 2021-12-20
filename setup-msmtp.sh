@@ -10,6 +10,8 @@ cat > /etc/msmtprc << EOL
 defaults
 port 25
 tls on
+tls_starttls on
+tls_certcheck off
 
 account default
 auth off
