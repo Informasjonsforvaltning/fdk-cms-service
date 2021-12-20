@@ -17,6 +17,6 @@ auth off
 host $SMTP_SERVER
 port $SMTP_PORT
 domain $SMTP_HOSTNAME
-from FDK Content Mangement Service<datalandsbyen@norge.no>
+from datalandsbyen@norge.no
 add_missing_date_header on
 EOL
