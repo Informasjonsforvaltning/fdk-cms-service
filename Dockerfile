@@ -2,7 +2,7 @@ FROM strapi/base
 
 COPY setup-msmtp.sh /
 RUN apt-get update && apt-get -y install msmtp
-RUN chmod 770 /setup-msmtp.sh && /setup-msmtp.sh
+RUN chmod 770 /setup-msmtp.sh
 
 WORKDIR /app
 
@@ -19,4 +19,7 @@ RUN yarn build
 
 EXPOSE 1337
 
-CMD ["yarn", "start"]
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
+
+CMD /startup.sh
