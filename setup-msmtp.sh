@@ -2,7 +2,7 @@
 
 echo "Setting up msmtp"
 
-ln -s /usr/bin/msmtp /usr/sbin/sendmail
+ln -s /usr/bin/msmtp /usr/bin/sendmail
 touch /var/log/msmtprc && chmod 666 /var/log/msmtprc
 
 cat > /etc/msmtprc << EOL
