@@ -15,5 +15,6 @@ account default
 auth off
 host $SMTP_SERVER:$SMTP_PORT
 domain $SMTP_HOSTNAME
+from FDK Content Mangement Service<datalandsbyen@norge.no>
 add_missing_date_header on
 EOL
