@@ -1,9 +1,10 @@
 module.exports = ({ env }) => ({
   email: {
-    provider: 'sendmail',
+    provider: 'nodemailer',
     providerOptions: {
-      smtpPort: 587,
-      smtpHost: 'localhost'
+      sendmail: true,
+      newline: 'unix',
+      path: '/usr/bin/sendmail'
     },
     settings: {
       defaultFrom: 'datalandsbyen@norge.no',
