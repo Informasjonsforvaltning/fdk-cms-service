@@ -84,7 +84,7 @@ module.exports = async (ctx, next) => {
     }
  }
 
-  const role = ctx.state.user.roles?.length > 0 ? ctx.state.user.roles[0] : publicRole;
+  const role = ctx.state.user?.roles?.length > 0 ? ctx.state.user.roles[0] : publicRole;
   const { route } = ctx.request;
   const permission = await strapi
     .query('permission', 'users-permissions')
