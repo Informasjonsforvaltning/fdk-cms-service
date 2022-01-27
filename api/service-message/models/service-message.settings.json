@@ -56,6 +56,47 @@
       ],
       "required": true
     },
+    "environment": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "staging",
+        "production"
+      ],
+      "default": "production",
+      "required": true
+    },
+    "channel_publiseringportal": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "required": false
+    },
+    "channel_registreringportal": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "required": false
+    },
+    "channel_adminportal": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean",
+      "required": false
+    },
     "channel": {
       "pluginOptions": {
         "i18n": {
