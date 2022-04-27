@@ -97,21 +97,6 @@
       "type": "boolean",
       "required": false
     },
-    "channel": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "Generell",
-        "Publiseringsportal",
-        "Registreringsportal",
-        "Adminportal"
-      ],
-      "required": true
-    },
     "short_description": {
       "pluginOptions": {
         "i18n": {
