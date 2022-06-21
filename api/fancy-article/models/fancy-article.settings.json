@@ -36,6 +36,14 @@
         "basic.image",
         "basic.paragraph"
       ]
+    },
+    "subtitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     }
   }
 }
