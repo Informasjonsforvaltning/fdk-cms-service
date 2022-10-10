@@ -1,21 +1,30 @@
 # fdk-cms-service
 
-A headless Content Management System based on [strapi][strapi].
+A headless Content Management System based on [strapi][strapi] v4.
 
 ## Usage
 
 ```
-npm install
+yarn install
 ```
+
 ### Run
+
 ```
-npm start
+yarn start
 ```
 
 or to develop
 
 ```
-npm run develop
+yarn run develop
+```
+
+### Run with docker-compose
+
+```
+docker-compose build
+docker-compose up
 ```
 
 ## Login localhost

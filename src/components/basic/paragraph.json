@@ -1,0 +1,17 @@
+{
+  "collectionName": "paragraph",
+  "info": {
+    "name": "Paragraph",
+    "icon": "align-justify",
+    "singularName": "paragraph",
+    "pluralName": "paragraphs",
+    "displayName": "Paragraph",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

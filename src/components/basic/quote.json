@@ -1,0 +1,20 @@
+{
+  "collectionName": "quote",
+  "info": {
+    "name": "Quote",
+    "icon": "quote-left",
+    "singularName": "quote",
+    "pluralName": "quotes",
+    "displayName": "Quote",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    }
+  }
+}
