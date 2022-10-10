@@ -1,21 +1,21 @@
-name: Deploy to production
+name: Deploy to staging
 
 on:
-  push:
+  pull_request:
+    types: [ready_for_review, opened, reopened, synchronize]
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
-  build-and-deploy-production:
-    name: Deploy to prod on merge to main branch
+  build-and-deploy-staging:
+    name: Deploy to staging on merge to main branch
     uses: Informasjonsforvaltning/workflows/.github/workflows/build-deploy.yaml@main
     with:
       app_name: fdk-cms-service
-      environment: prod
-      cluster: digdir-fdk-prod
+      environment: staging
+      cluster: digdir-fdk-dev
     secrets:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GCP_SA_DIGDIR_FDK_GCR_KEY: ${{ secrets.GCP_SA_DIGDIR_FDK_GCR_KEY }}
-      DIGDIR_FDK_AUTODEPLOY: ${{ secrets.DIGDIR_FDK_PROD_AUTODEPLOY }}
+      DIGDIR_FDK_AUTODEPLOY: ${{ secrets.DIGDIR_FDK_DEV_AUTODEPLOY }}
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

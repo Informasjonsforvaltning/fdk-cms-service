@@ -1,0 +1,30 @@
+{
+  "collectionName": "image",
+  "info": {
+    "icon": "image",
+    "name": "Image",
+    "singularName": "image",
+    "pluralName": "images",
+    "displayName": "Image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "required": false
+    },
+    "alternativeText": {
+      "type": "string"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "fullSize",
+        "left",
+        "right"
+      ]
+    }
+  }
+}
