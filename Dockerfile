@@ -19,7 +19,7 @@ RUN apk add msmtp
 RUN chmod 770 /setup-msmtp.sh /startup.sh
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-WORKDIR /opt/app
+WORKDIR /app
 COPY --from=build /opt/node_modules ./node_modules
 ENV PATH /opt/node_modules/.bin:$PATH
 COPY --from=build /opt/app ./
