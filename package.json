@@ -34,7 +34,7 @@
     "@strapi/plugin-graphql": "^4.6.1",
     "@strapi/plugin-i18n": "^4.6.1",
     "@strapi/plugin-users-permissions": "^4.6.1",
-    "@strapi/provider-email-nodemailer": "^4.6.1",
+    "@strapi/provider-email-nodemailer": "^4.11.5",
     "@strapi/strapi": "^4.6.1",
     "koa": "^2.14.1",
     "pg": "^8.9.0"
