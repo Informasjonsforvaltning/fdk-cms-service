@@ -2726,10 +2726,10 @@
   resolved "https://registry.yarnpkg.com/@strapi/provider-audit-logs-local/-/provider-audit-logs-local-4.11.2.tgz#65b0d124587dab4992ee4fb47eb2c8c89bb6671d"
   integrity sha512-sXf94Gqx50ljogzI6y1P6uvSnIIpwWmO1LBcGYX5xjH44CFRC78iMrJNt0aWV5WeGOYeT30pNPltAou6Ve9wLw==
 
-"@strapi/provider-email-nodemailer@^4.6.1":
-  version "4.11.2"
-  resolved "https://registry.yarnpkg.com/@strapi/provider-email-nodemailer/-/provider-email-nodemailer-4.11.2.tgz#0a3bca6c707004359ff2712726c4626ee3ff9ff1"
-  integrity sha512-mhQ13P5WjOnNQVt8eZH5IJXxjzVfQNBt38eJy7np+uuQEy5U5Y+9BRXNp37mAZEGk/zVcgYqd00QHXsBqdeEoA==
+"@strapi/provider-email-nodemailer@^4.12.0":
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/@strapi/provider-email-nodemailer/-/provider-email-nodemailer-4.12.0.tgz#83aaaad358045181571a692c09aec7e025614e03"
+  integrity sha512-YgYcMJoEdY501s7oAWieRTKqg89wBdu0Sk5TsidszjdAx1Z7vqrr4r9a81DBujYfPk1vVyGm/ss1xe+InZrETw==
   dependencies:
     lodash "4.17.21"
     nodemailer "6.9.1"
