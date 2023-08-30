@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transport-article",
+  "info": {
+    "name": "Transport article",
+    "singularName": "transport-article",
+    "pluralName": "transport-articles",
+    "displayName": "Transport article",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "dynamiczone",
+      "components": ["basic.quote", "basic.image", "basic.paragraph"]
+    },
+    "subtitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    }
+  }
+}
