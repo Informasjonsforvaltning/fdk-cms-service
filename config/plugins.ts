@@ -35,5 +35,9 @@ export default ({ env }) => ({
         defaultReplyTo: 'datalandsbyen@norge.no'
       }
     }
-  }
+  },
+  'import-export-entries': {
+    enabled: true,
+    config: {},
+  },
 });
