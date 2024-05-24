@@ -62,7 +62,7 @@
         }
       },
       "type": "enumeration",
-      "enum": ["staging", "production"],
+      "enum": ["staging", "demo", "production"],
       "default": "production",
       "required": true
     },
