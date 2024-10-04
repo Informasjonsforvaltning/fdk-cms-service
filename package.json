@@ -21,6 +21,7 @@
     "@codemirror/state": "^6.4.1",
     "@codemirror/theme-one-dark": "^6.1.2",
     "@codemirror/view": "^6.34.1",
+    "@koa/router": "^13.1.0",
     "@lezer/common": "^1.2.2",
     "codemirror": "^6.0.1",
     "eslint": "^8.55.0",
@@ -35,24 +36,23 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "koa": "^2.15.3",
-    "prettier": "^3.3.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-is": "^18.3.1",
-    "react-router-dom": "^5.3.4",
-    "styled-components": "^5.3.11"
+    "prettier": "^3.3.3"
   },
   "dependencies": {
     "@strapi/icons": "^1.19.0",
-    "@strapi/plugin-graphql": "^4.25.12",
-    "@strapi/plugin-i18n": "^4.25.12",
-    "@strapi/plugin-users-permissions": "^4.25.12",
-    "@strapi/provider-email-nodemailer": "^4.25.12",
-    "@strapi/strapi": "^4.25.12",
-    "pg": "^8.13.0"
+    "@strapi/plugin-graphql": "^5.0.2",
+    "@strapi/plugin-users-permissions": "^5.0.2",
+    "@strapi/provider-email-nodemailer": "^5.0.2",
+    "@strapi/strapi": "^5.0.2",
+    "pg": "^8.13.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
-  }
+  },
+  "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }
