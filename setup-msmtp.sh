@@ -7,7 +7,7 @@ touch /var/log/msmtprc && chmod 666 /var/log/msmtprc
 cat > /etc/msmtprc << EOL
 # Set default values for all following accounts.
 defaults
-tls on
+tls off
 tls_starttls off
 tls_certcheck off
 
