@@ -8,7 +8,7 @@ cat > /etc/msmtprc << EOL
 # Set default values for all following accounts.
 defaults
 tls on
-tls_starttls on
+tls_starttls off
 tls_certcheck off
 
 account default
