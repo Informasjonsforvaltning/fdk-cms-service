@@ -12,7 +12,7 @@
     "lint": "eslint"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.26.8",
     "@babel/runtime": "^7.26.0",
     "@codemirror/autocomplete": "^6.18.1",
     "@codemirror/language": "^6.10.3",
