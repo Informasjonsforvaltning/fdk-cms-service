@@ -36,14 +36,14 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "koa": "^2.15.3",
-    "prettier": "^3.4.2"
+    "prettier": "^3.5.0"
   },
   "dependencies": {
     "@strapi/icons": "^1.19.0",
-    "@strapi/plugin-graphql": "^5.7.0",
-    "@strapi/plugin-users-permissions": "^5.7.0",
-    "@strapi/provider-email-nodemailer": "5.7.0",
-    "@strapi/strapi": "^5.7.0",
+    "@strapi/plugin-graphql": "^5.9.0",
+    "@strapi/plugin-users-permissions": "^5.9.0",
+    "@strapi/provider-email-nodemailer": "5.9.0",
+    "@strapi/strapi": "^5.9.0",
     "pg": "^8.13.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
