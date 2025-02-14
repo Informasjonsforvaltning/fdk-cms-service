@@ -1,4 +1,4 @@
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 # Installing libvips-dev for sharp Compatibility
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev > /dev/null 2>&1
 ARG NODE_ENV=production
@@ -13,8 +13,8 @@ COPY ./ .
 RUN yarn build
 
 
-FROM node:20-alpine
-RUN apk add --no-cache vips-dev
+FROM node:22-alpine
+RUN apk update && apk add --no-cache vips-dev && apk upgrade -a
 COPY setup-msmtp.sh startup.sh /
 RUN apk add msmtp
 RUN chmod 770 /setup-msmtp.sh /startup.sh
