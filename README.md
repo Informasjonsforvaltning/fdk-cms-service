@@ -1,6 +1,6 @@
 # fdk-cms-service
 
-A headless Content Management System based on [strapi][strapi] v4.
+A headless Content Management System based on [strapi][strapi] v5.
 
 ## Usage
 
