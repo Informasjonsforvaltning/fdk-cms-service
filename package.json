@@ -12,8 +12,8 @@
     "lint": "eslint"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/runtime": "^7.26.10",
+    "@babel/core": "^7.28.3",
+    "@babel/runtime": "^7.28.3",
     "@koa/router": "^13.1.0",
     "@lezer/common": "^1.2.3",
     "eslint": "^8.55.0",
@@ -27,37 +27,30 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "prettier": "^3.5.3",
-    "koa": "^2.16.0"
+    "prettier": "^3.6.2"
   },
   "dependencies": {
     "@strapi/icons": "^1.19.0",
-    "@strapi/plugin-graphql": "^5.12.6",
-    "@strapi/plugin-users-permissions": "^5.12.6",
-    "@strapi/provider-email-nodemailer": "5.12.6",
-    "@strapi/strapi": "^5.12.6",
+    "@strapi/plugin-graphql": "^5.23.0",
+    "@strapi/plugin-users-permissions": "^5.23.0",
+    "@strapi/provider-email-nodemailer": "5.23.0",
+    "@strapi/strapi": "^5.23.0",
     "@types/react": "^18.0.0",
-    "pg": "^8.15.6",
+    "pg": "^8.16.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6.1.19"
   },
   "resolutions": {
-    "@babel/core": "^7.26.10",
-    "@babel/runtime": "^7.26.10",
-    "@babel/runtime-corejs3": "^7.26.10",
-    "@codemirror/language": "^6.10.6",
-    "cookie": "^0.7.2",
-    "cross-spawn": "^7.0.6",
-    "elliptic": "^6.6.1",
+    "brace-expansion": "^1.1.12",
     "esbuild": "^0.25.0",
-    "koa": "^2.16.0",
-    "nanoid": "^5.1.2",
-    "nodemailer": "^6.10.0",
-    "vite": "^5.4.17"
+    "form-data": "^4.0.4",
+    "formidable": "^2.1.3",
+    "tmp": "^0.2.4",
+    "koa": "^2.16.2"
   },
-  "engines": {
+  "engines": {    
     "node": ">=18.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
