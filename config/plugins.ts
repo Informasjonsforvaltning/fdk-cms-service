@@ -3,9 +3,9 @@ export default ({ env }) => ({
     config: {
       jwtSecret: env('JWT_SECRET'),
       jwt: {
-        expiresIn: '7d',
-      },
-    },
+        expiresIn: '7d'
+      }
+    }
   },
   graphql: {
     enabled: true,
@@ -17,8 +17,8 @@ export default ({ env }) => ({
       defaultLimit: 100,
       apolloServer: {
         introspection: true,
-        tracing: false,
-      },
+        tracing: false
+      }
     }
   },
   email: {

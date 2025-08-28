@@ -1,4 +1,4 @@
-export default ({ env }) => ([
+export default ({ env }) => [
   'strapi::errors',
   'strapi::security',
   {
@@ -21,4 +21,4 @@ export default ({ env }) => ([
   'strapi::session',
   'strapi::favicon',
   'strapi::public'
-]);
+];
