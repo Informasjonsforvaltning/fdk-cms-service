@@ -1,3 +1,5 @@
-import { factories } from '@strapi/strapi'; 
+import { factories } from '@strapi/strapi';
 
-export default factories.createCoreController('api::service-message.service-message');
+export default factories.createCoreController(
+  'api::service-message.service-message'
+);

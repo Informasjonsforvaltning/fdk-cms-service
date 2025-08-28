@@ -1,3 +1,3 @@
 export default {
-    bootstrap() {},
+  bootstrap() {}
 };

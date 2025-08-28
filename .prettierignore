@@ -1,7 +1,9 @@
+node_modules
 .cache
 build
 dist
-**/node_modules/**
 coverage
 *.min.js
 public/uploads
+yarn.lock
+package-lock.json

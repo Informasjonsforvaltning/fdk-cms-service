@@ -3,15 +3,29 @@
     "es2020": true,
     "jest": true
   },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
   "extends": [
-    "airbnb/base",
+    "airbnb-typescript/base",
     "prettier",
-    "plugin:json/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  "plugins": ["html", "json", "prettier", "eslint-comments"],
+  "plugins": [
+    "@typescript-eslint",
+    "html",
+    "json",
+    "prettier",
+    "eslint-comments",
+    "react",
+    "react-hooks",
+    "jsx-a11y"
+  ],
   "globals": {
     "strapi": "writable"
   },
@@ -51,9 +65,18 @@
       "error",
       "ignorePackages",
       {
-        "js": "never"
+        "js": "never",
+        "ts": "never",
+        "tsx": "never"
       }
-    ]
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "warn"
   },
   "overrides": [
     {

@@ -19,12 +19,7 @@
     },
     "style": {
       "type": "enumeration",
-      "enum": [
-        "none",
-        "fullSize",
-        "left",
-        "right"
-      ]
+      "enum": ["none", "fullSize", "left", "right"]
     }
   }
 }

@@ -34,7 +34,12 @@
         }
       },
       "type": "dynamiczone",
-      "components": ["basic.quote", "basic.image", "basic.paragraph", "basic.youtube"]
+      "components": [
+        "basic.quote",
+        "basic.image",
+        "basic.paragraph",
+        "basic.youtube"
+      ]
     },
     "subtitle": {
       "pluginOptions": {

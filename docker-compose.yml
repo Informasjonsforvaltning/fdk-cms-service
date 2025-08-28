@@ -1,7 +1,7 @@
 services:
   strapi:
     container_name: strapi
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     image: mystrapi:latest
@@ -11,8 +11,8 @@ services:
       POSTGRES_PORT: 5432
       POSTGRES_NAME: strapi
       POSTGRES_USERNAME: strapi
-      POSTGRES_PASSWORD: strapi    
-      APP_KEYS: testKey1,testKey2 
+      POSTGRES_PASSWORD: strapi
+      APP_KEYS: testKey1,testKey2
       API_TOKEN_SALT: someRandomLongString
       JWT_SECRET: jwt-secret
       ADMIN_JWT_SECRET: admin-jwt-secret
@@ -23,7 +23,7 @@ services:
       - ./package.json:/opt/package.json
       - ./yarn.lock:/opt/yarn.lock # Replace with package-lock.json if using npm
     ports:
-      - "1337:1337"
+      - '1337:1337'
     networks:
       strapi:
         aliases:
@@ -41,14 +41,14 @@ services:
     volumes:
       - strapi-data:/var/lib/postgresql/data/ #using a volume
     ports:
-      - "5432:5432"
+      - '5432:5432'
     networks:
       strapi:
         aliases:
           - db
 
 volumes:
-    strapi-data:
+  strapi-data:
 
 networks:
   strapi:
