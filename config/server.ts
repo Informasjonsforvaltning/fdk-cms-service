@@ -5,5 +5,7 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS')
   },
-  url: env.array('SERVER_URL')
+  url: env.array('SERVER_URL'),
+  // Additional proxy configuration
+  trustProxy: env('TRUST_PROXY', 'true') === 'true'
 });

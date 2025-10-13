@@ -14,7 +14,7 @@ export default ({ env }) => ({
     cookie: {
       path: '/',
       httpOnly: true,
-      secure: env('NODE_ENV') === 'production',
+      secure: false, // Disable secure cookies for reverse proxy setup
       sameSite: 'lax',
       maxAge: 86400000, // 24 hours
       overwrite: true,
