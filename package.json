@@ -56,7 +56,7 @@
   "dependencies": {
     "@strapi/icons": "^2.1.2",
     "@strapi/plugin-graphql": "^5.33.3",
-    "@strapi/plugin-users-permissions": "^5.33.3",
+    "@strapi/plugin-users-permissions": "^5.33.4",
     "@strapi/provider-email-nodemailer": "5.33.3",
     "@strapi/strapi": "^5.33.3",
     "pg": "^8.17.1",
