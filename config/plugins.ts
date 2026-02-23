@@ -7,20 +7,6 @@ export default ({ env }) => ({
       }
     }
   },
-  graphql: {
-    enabled: true,
-    config: {
-      endpoint: '/graphql',
-      shadowCRUD: true,
-      playgroundAlways: false,
-      depthLimit: 10,
-      defaultLimit: 100,
-      apolloServer: {
-        introspection: true,
-        tracing: false
-      }
-    }
-  },
   email: {
     enabled: true,
     config: {

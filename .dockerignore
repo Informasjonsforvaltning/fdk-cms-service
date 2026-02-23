@@ -4,3 +4,10 @@
 build/
 node_modules/
 data/
+dist/
+*.md
+.env*
+.dockerignore
+Dockerfile
+docker-compose*
+.github/
