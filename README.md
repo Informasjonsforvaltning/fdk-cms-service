@@ -45,8 +45,6 @@ Run Strapi in "develop" mode from localhost.
 Build or edit content-types from Strapi admin.
 Commit generated files.
 
-Applications need to generate types by running graphql-codegen script.
-
 ## Quickstart
 
 ```shell
