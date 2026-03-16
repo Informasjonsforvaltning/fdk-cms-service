@@ -7,7 +7,8 @@ WORKDIR /opt/
 COPY ./package.json ./yarn.lock ./
 ENV PATH=/opt/node_modules/.bin:$PATH
 RUN yarn global add node-gyp
-RUN yarn config set network-timeout 600000 -g && yarn install --production
+RUN yarn config set network-timeout 600000 -g && yarn install --production && \
+    test -d node_modules/wrap-ansi || cp -r node_modules/wrap-ansi-cjs node_modules/wrap-ansi
 WORKDIR /opt/app
 COPY ./ .
 RUN yarn build
