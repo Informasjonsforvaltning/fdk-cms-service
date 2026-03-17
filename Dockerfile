@@ -1,13 +1,14 @@
 FROM node:22-alpine AS build
 # Installing libvips-dev for sharp Compatibility
-RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev > /dev/null 2>&1
+RUN apk update && apk upgrade -a && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev > /dev/null 2>&1
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/
 COPY ./package.json ./yarn.lock ./
 ENV PATH=/opt/node_modules/.bin:$PATH
 RUN yarn global add node-gyp
-RUN yarn config set network-timeout 600000 -g && yarn install --production
+RUN yarn config set network-timeout 600000 -g && yarn install --production && \
+    test -d node_modules/wrap-ansi || cp -r node_modules/wrap-ansi-cjs node_modules/wrap-ansi
 WORKDIR /opt/app
 COPY ./ .
 RUN yarn build
