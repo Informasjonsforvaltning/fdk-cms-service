@@ -15,7 +15,7 @@ export default ({ env }) => [
       origin: env.array('CORS_ORIGIN')
     }
   },
-  'strapi::logger',
+  'global::access-logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
