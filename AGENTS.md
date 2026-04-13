@@ -15,16 +15,16 @@ Context for AI coding agents (Cursor, Claude, Copilot, etc.) working on this pro
 
 ### Key Commands
 
-| Command | Purpose |
-|---------|---------|
-| `yarn develop` | Run Strapi in dev mode |
-| `yarn start` | Run production build |
-| `yarn build` | Build Strapi |
-| `yarn lint` | Run ESLint |
-| `yarn lint:fix` | Auto-fix lint issues |
-| `yarn type-check` | TypeScript check |
-| `yarn format:check` | Prettier check |
-| `yarn pre-commit` | Full pre-commit pipeline |
+| Command             | Purpose                  |
+| ------------------- | ------------------------ |
+| `yarn develop`      | Run Strapi in dev mode   |
+| `yarn start`        | Run production build     |
+| `yarn build`        | Build Strapi             |
+| `yarn lint`         | Run ESLint               |
+| `yarn lint:fix`     | Auto-fix lint issues     |
+| `yarn type-check`   | TypeScript check         |
+| `yarn format:check` | Prettier check           |
+| `yarn pre-commit`   | Full pre-commit pipeline |
 
 ### Docker
 
@@ -51,26 +51,6 @@ When addressing Dependabot or `yarn audit` vulnerabilities:
 3. **Reinstall**: Run `yarn install` to regenerate `yarn.lock`.
 4. **Recheck**: Run `yarn audit` to confirm fixes.
 5. **Unfixable**: Some packages (e.g. `elliptic` via `jwk-to-pem`) have no patch; note them and track upstream.
-
-### Current Resolutions (security overrides)
-
-These packages are pinned to patched versions via `resolutions`:
-
-| Package | Version | Reason |
-|---------|---------|--------|
-| `koa` | ^2.16.4 | Host header injection (CVE) |
-| `rollup` | ^4.59.0 | Path traversal in output files |
-| `ajv`, `esbuild`, `lodash`, etc. | (see package.json) | Other CVE overrides |
-
-### Example: Adding a new security resolution
-
-```json
-"resolutions": {
-  "vulnerable-pkg": "^patched.version"
-}
-```
-
-Then run `yarn install` and `yarn audit`.
 
 ## PR Instructions
 
