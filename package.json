@@ -55,9 +55,9 @@
   },
   "dependencies": {
     "@strapi/icons": "^2.1.2",
-    "@strapi/plugin-users-permissions": "^5.36.1",
-    "@strapi/provider-email-nodemailer": "5.36.1",
-    "@strapi/strapi": "^5.36.1",
+    "@strapi/plugin-users-permissions": "^5.45.0",
+    "@strapi/provider-email-nodemailer": "5.45.0",
+    "@strapi/strapi": "^5.45.0",
     "pg": "^8.18.0",
     "wrap-ansi": "7.0.0",
     "string-width": "4.2.3",
@@ -99,7 +99,8 @@
     "picomatch": "^2.3.2",
     "follow-redirects": "^1.16.0",
     "vite": "^6.4.2",
-    "fast-uri": "^3.1.2"
+    "fast-uri": "^3.1.2",
+    "postcss": "^8.5.10"
   },
   "engines": {
     "node": ">=22.x.x",
