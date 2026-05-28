@@ -58,14 +58,17 @@
     "@strapi/plugin-users-permissions": "^5.45.0",
     "@strapi/provider-email-nodemailer": "5.45.0",
     "@strapi/strapi": "^5.45.0",
+    "brace-expansion": "^5.0.5",
     "pg": "^8.18.0",
-    "wrap-ansi": "7.0.0",
-    "string-width": "4.2.3",
-    "strip-ansi": "6.0.1",
+    "qs": "^6.14.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.3",
-    "styled-components": "^6.3.6"
+    "string-width": "4.2.3",
+    "strip-ansi": "6.0.1",
+    "styled-components": "^6.3.6",
+    "tmp": "^0.2.4",
+    "wrap-ansi": "7.0.0"
   },
   "resolutions": {
     "ajv": "^8.18.0",
@@ -101,7 +104,8 @@
     "vite": "^6.4.2",
     "fast-uri": "^3.1.2",
     "postcss": "^8.5.10",
-    "sanitize-html": "^2.17.4"
+    "sanitize-html": "^2.17.4",
+    "ws": "^8.20.1"
   },
   "engines": {
     "node": ">=22.x.x",
