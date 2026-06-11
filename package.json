@@ -71,6 +71,7 @@
     "wrap-ansi": "7.0.0"
   },
   "resolutions": {
+    "shell-quote": "^1.8.4",
     "ajv": "^8.18.0",
     "bn.js": "^5.2.3",
     "axios": "^1.15.2",
