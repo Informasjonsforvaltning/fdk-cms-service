@@ -1,6 +1,7 @@
 export default ({ env }) => [
   'strapi::errors',
   'strapi::security',
+  'strapi::compression',
   {
     name: 'strapi::poweredBy',
     config: {
