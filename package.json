@@ -107,7 +107,7 @@
     "vite": "^6.4.4",
     "fast-uri": "^3.1.8",
     "postcss": "^8.5.18",
-    "sanitize-html": "2.18.0",
+    "sanitize-html": "^2.18.1",
     "ws": "^8.20.1",
     "uuid": "^11.1.1",
     "js-yaml": "^4.3.2",
