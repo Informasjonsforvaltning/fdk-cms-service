@@ -89,7 +89,6 @@
     "tmp": "^0.2.4",
     "undici": "^6.29.1",
     "webpack": "^5.104.1",
-    "qs": "^6.16.1",
     "zod": "^4.6.6",
     "flatted": "^3.4.2",
     "glob": "^10.5.0",
@@ -119,7 +118,8 @@
     "@ai-sdk/provider-utils": "^3.0.28",
     "webpack-dev-middleware": "^7.4.6",
     "source-map-js": "^1.2.2",
-    "http-cache-semantics": "^4.3.0"
+    "http-cache-semantics": "^4.3.0",
+    "**/qs": "^6.17.1"
   },
   "engines": {
     "node": ">=22.x.x",
